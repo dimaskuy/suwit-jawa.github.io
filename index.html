@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUWIT JAWA v2.0</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+  </head>
+  <body>
+
+    <h1>Suwit Jawa <span>2</span></h1>
+    <p class="desc">Silahkan pilih salah satu dari pilihan: <b>semut</b>, <b>manusia</b>, <b>gajah</b>. <br> Kamu punya <b id="kesempatan">3</b><b>x</b> kesempatan. </p>
+
+      <div class="area-score">
+        <h1 id="score-computer" class="inline_block" data-toggle="tooltip" title="Score Computer">0</h1>
+        <h1 class="inline_block">:</h1>
+        <h1 id="score-player" class="inline_block" data-toggle="tooltip" title="Score Anda">0</h1>
+      </div>
+
+      <div class="nofocus hidden">
+        <div class="score-result ">
+          <h1 id="score-result-object"></h1>
+          <h2>WINS!</h2>
+          <h3 id="score-result-note"></h3>
+            <button type="button" name="button" id="close-result">OK!</button>
+        </div>
+      </div>
+        <!-- <h2 id="score-result"></h2> -->
+
+    <div class="container">
+      <div class="area-computer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/1200px-Blue_question_mark_icon.svg.png" alt="?" class="img-computer" title="?">
+      </div>
+      <div class="info"></div>
+      <div class="area-player">
+        <ul class="pilihan-box">
+          <li class="pilihan"><img src="https://i.ibb.co/g3wfxgM/semut.png" alt="Semut" class="semut" data-toggle="tooltip" title="Semut"> </li>
+          <li class="pilihan"><img src="https://i.ibb.co/swkWMHt/orang.png" alt="Manusia" class="manusia" data-toggle="tooltip" title="Manusia"> </li>
+          <li class="pilihan"><img src="https://i.ibb.co/x8GqR9f/gajah.png" alt="Gajah" class="gajah" data-toggle="tooltip" title="Gajah"> </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tutorial">
+      <h2>INSTRUKSi SUWIT JAWA:</h2>
+      <ul class="pilihan-sample-box">
+    		<li class="pilihan-sample"><img src="https://i.ibb.co/g3wfxgM/semut.png" alt="Semut" class="semut-sample" data-toggle="tooltip" title="Semut"> <span>Merupakan jari untuk menandakan hewan <b>semut</b>.</span> </li>
+    		<li class="pilihan-sample"><img src="https://i.ibb.co/swkWMHt/orang.png" alt="Manusia" class="manusia-sample" data-toggle="tooltip" title="Manusia"> <span>Merupakan jari untuk menandakan <b>manusia</b>.</span> </li>
+    		<li class="pilihan-sample"><img src="https://i.ibb.co/x8GqR9f/gajah.png" alt="Gajah" class="gajah-sample" data-toggle="tooltip" title="Gajah"> <span>Merupakan jari untuk menandakan hewan <b>gajah</b>.</span> </li>
+    	</ul>
+
+      <h3>Aturan Permainan:</h3>
+      <div class="container-aturan">
+        <ul class="aturan-box">
+
+          <li class="aturan"><strong>Player / Anda</strong> akan digambarkan dengan warna <sub>merah</sub>, sedangkan <em>Computer</em> digambarkan dengan warna <samp>biru</samp>. </li>
+
+          <li class="aturan">Pilihan dari Computer akan teracak. Jadi, Computer dapat mengeluarkan gambar <i>semut</i>, <i>manusia</i>, <i>gajah</i> kapanpun. </li>
+
+          <li class="aturan">Jika pilihan dari <strong>Anda</strong> (player), dan pilihan dari <em>Computer</em> mengeluarkan gambar yang sama, maka akan dianggap <b>seri</b>. (Contoh, Anda memilih <i>semut</i> dan Computer mengeluarkan gambar <i>semut</i> juga, akan dianggap seri, begitupun dengan gambar yang sama lainya). </li>
+
+          <li class="aturan">Setiap kali <strong>Anda</strong> menang, maka Anda akan memperoleh <b>1 poin</b>. Dan jika <em>Computer</em> menang, maka Computer akan memperoleh <b>1 poin</b>. Jika <strong>Anda</strong> dan <em>Computer</em> seri, maka keduanya tidak akan mendapatkan poin.</li>
+
+          <li class="aturan">Jika <strong>Anda</strong> memilih <i>semut</i> dan <em>Computer</em> memilih <i>gajah</i>, maka Anda akan <b>menang</b>. Tetapi jika <strong>Anda</strong> memilih <i>semut</i> dan <em>Computer</em> memilih <i>manusia</i>, maka Anda <b>kalah</b>. </li>
+
+          <li class="aturan">Jika <strong>Anda</strong> memilih <i>manusia</i> dan <em>Computer</em> memilih <i>semut</i>, maka Anda akan <b>menang</b>. Sebaliknya, jika <strong>Anda</strong> memilih <i>manusia</i> dan <em>Computer</em> memilih <i>gajah</i>, maka Anda <b>kalah</b>. </li>
+
+          <li class="aturan">Kemudian, jika <strong>Anda</strong> memilih <i>gajah</i> dan <em>Computer</em> memilih <i>semut</i>, maka Anda akan <b>kalah</b>. Jika <strong>Anda</strong> memilih <i>gajah</i> dan <em>Computer</em> memilih <i>manusia</i>, maka Anda <b>menang</b>. </li>
+
+        </ul>
+      </div>
+
+      <h2 class="good_luck">GOOD LUCK! </h2>
+      <p class="credit">Created by <a href="http://github.com/dimaskuy" target="_blank">DimasRS</a>, helped by <a href="https://www.youtube.com/channel/UCkXmLjEr95LVtGuIm3l2dPg" target="_blank">Sandhika Galih</a>.</p>
+    </div>
+
+
+    <script src="script.js" charset="utf-8"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+  </body>
+</html>
