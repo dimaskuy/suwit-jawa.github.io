@@ -6,11 +6,12 @@
     <title>SUWIT JAWA v2.0</title>
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
 
-    <h1>Suwit Jawa <span>2</span></h1>
-    <p class="desc">Silahkan pilih salah satu dari pilihan: <b>semut</b>, <b>manusia</b>, <b>gajah</b>. <br> Kamu punya <b id="kesempatan">3</b><b>x</b> kesempatan. </p>
+    <h1 data-aos="fade-down" data-aos-duration="500">Suwit Jawa <span>2</span></h1>
+    <p class="desc" data-aos="fade-in" data-aos-duration="500">Silahkan pilih salah satu dari pilihan: <b>semut</b>, <b>manusia</b>, <b>gajah</b>. <br> Kamu punya <b id="kesempatan" data-aos="fade-in" data-aos-duration="500">3</b><b>x</b> kesempatan. </p>
 
       <div class="area-score">
         <h1 id="score-computer" class="inline_block" data-toggle="tooltip" title="Score Computer">0</h1>
@@ -80,10 +81,12 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
-    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script type="text/javascript">
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+        AOS.init();
+      </script>
   </body>
 </html>
