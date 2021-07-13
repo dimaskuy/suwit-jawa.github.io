@@ -1,5 +1,7 @@
 # suwit-jawa.github.io
 
+[https://dimaskuy.github.io/suwit-jawa.github.io/]
+
 Latihan JavaScript DOM membuat game Suwit Jawa. Peraturan permainan ada di di halaman website :)
 
 Latihan ini adalah latihan modifikasi berdasarkan video dari Web Programming Unpas materi JavaScript DOM (https://youtube.com/playlist?list=PLFIM0718LjIWB3YRoQbQh82ZewAGtE2-3).
