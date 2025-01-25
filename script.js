@@ -10,7 +10,9 @@ const pilihan = document.querySelectorAll('li > img');
 const gambarComputer = document.querySelector('.img-computer');
 const pilihan = Array.from(document.querySelectorAll('.pilihan > img'));
 const info = document.querySelector('.info');
-
+const srcSemut = 'img/semut.png';
+const srcManusia = 'img/orang.png';
+const srcGajah = 'img/gajah.png';
 
 function getPilihanComputer() {
   const computer = Math.random()
@@ -131,17 +133,17 @@ pilihan.forEach(function(img) {
 
     setTimeout(function() {
       if (pilihanComputer === 'semut') {
-        gambarComputer.setAttribute('src', 'https://i.ibb.co/g3wfxgM/semut.png');
+        gambarComputer.setAttribute('src', srcSemut);
         gambarComputer.setAttribute('alt', 'Semut');
         gambarComputer.setAttribute('title', 'Semut');
       }
       else if (pilihanComputer === 'manusia') {
-        gambarComputer.setAttribute('src', 'https://i.ibb.co/swkWMHt/orang.png');
+        gambarComputer.setAttribute('src', srcManusia);
         gambarComputer.setAttribute('alt', 'Manusia');
         gambarComputer.setAttribute('title', 'Manusia');
       }
       else if (pilihanComputer === 'gajah') {
-        gambarComputer.setAttribute('src', 'https://i.ibb.co/x8GqR9f/gajah.png');
+        gambarComputer.setAttribute('src', srcGajah);
         gambarComputer.setAttribute('alt', 'Gajah');
         gambarComputer.setAttribute('title', 'Gajah');
       }
